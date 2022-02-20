@@ -135,7 +135,7 @@ def SBA_Loan_predict():
         NAICS_23, NAICS_31_33, NAICS_42, NAICS_44_45, NAICS_48_49, NAICS_51, NAICS_52, NAICS_53, NAICS_54, NAICS_55,
         NAICS_56, NAICS_61, NAICS_62, NAICS_71, NAICS_72, NAICS_81, NAICS_92]])
         
-        pred_and_proba = f"{round(np.max(pred_proba)*100,2)}% {'APPROVED' if pred == 1 else 'DENIED'}"
+        pred_and_proba = f"{round(np.max(pred_proba)*100,2)}% {'Approuvé' if pred == 1 else 'Refusé'}"
 
         return render_template('result.html',
         data=input, prediction=pred_and_proba, Term=input['Term'],
